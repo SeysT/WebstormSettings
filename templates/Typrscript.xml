@@ -1,0 +1,22 @@
+<templateSet group="Typrscript">
+  <template name="clog" value="console.log('$value$', $value$)" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="e2e" value="import { describeTest } from 'core';&#10;import { po } from 'page-objects';&#10;&#10;describeTest('# $Scope$ - $ScopeDetail$ - ', () =&gt; {&#10;&#10;  before(() =&gt; cy.healthBootstrap());&#10;&#10;  it('should $name$', () =&gt; {&#10;  });&#10;});&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Scope" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ScopeDetail" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="it" value="it('$desc$', () =&gt; {&#10;});" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="desc" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+</templateSet>
