@@ -2,4 +2,5 @@
   <action id="CommentByLineComment">
     <keyboard-shortcut first-keystroke="meta alt colon" />
   </action>
+  <action id="linessorter.sort" />
 </keymap>
