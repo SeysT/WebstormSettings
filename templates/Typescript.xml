@@ -1,6 +1,7 @@
 <templateSet group="Typescript">
-  <template name="clog" value="console.log('$value$', $value$)" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="clog" value="console.log('$PARAM_TEXT$', $PARAM$);$END$" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM_TEXT" expression="" defaultValue="PARAM" alwaysStopAt="false" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="TypeScript" value="true" />
@@ -14,7 +15,7 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="it" value="it('$desc$', () =&gt; {&#10;});" description="" toReformat="true" toShortenFQNames="true" deactivated="true">
+  <template name="it" value="it('$desc$', () =&gt; {&#10;});" description="" toReformat="true" toShortenFQNames="true">
     <variable name="desc" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="TypeScript" value="true" />
