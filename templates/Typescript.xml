@@ -21,7 +21,7 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="ng-component" value="import { Component } from '@angular/core';&#10;&#10;@Component({&#10;  selector: 'padoa-$SELECTOR$',&#10;  templateUrl: './$SELECTOR$.component.html',&#10;  styleUrls: ['./$SELECTOR$.component.scss']&#10;})&#10;&#10;export class $COMPONENT_NAME$ {&#10;    constructor() { }&#10;    &#10;    $END$&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="ng-component" value="import { Component } from '@angular/core';&#10;&#10;@Component({&#10;  selector: 'padoa-$SELECTOR$',&#10;  templateUrl: './$SELECTOR$.component.html',&#10;  styleUrls: ['./$SELECTOR$.component.scss']&#10;})&#10;&#10;export class $COMPONENT_NAME$ {&#10;    constructor() { }&#10;    &#10;    $END$&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
     <variable name="COMPONENT_NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
     <variable name="SELECTOR" expression="lowercaseAndDash(substringBefore(COMPONENT_NAME, Component))" defaultValue="COMPONENT_NAME" alwaysStopAt="false" />
     <context>
