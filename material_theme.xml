@@ -2,10 +2,11 @@
   <component name="MaterialThemeConfig">
     <option name="allowDataCollection" value="true" />
     <option name="isWizardShown" value="true" />
+    <option name="pristineConfig" value="false" />
     <option name="accentColor" value="80cbc4" />
     <option name="highlightColor" value="80cbc4" />
     <option name="selectedTheme" value="SOLARIZED_DARK" />
     <option name="userId" value="12bca6d1:163f80c4cc2:-7fff" />
-    <option name="version" value="3.8.0.2" />
+    <option name="version" value="3.9.0.2" />
   </component>
 </application>
