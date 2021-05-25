@@ -21,11 +21,27 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="ng-component" value="import { Component } from '@angular/core';&#10;&#10;@Component({&#10;  selector: 'padoa-$SELECTOR$',&#10;  templateUrl: './$SELECTOR$.component.html',&#10;  styleUrls: ['./$SELECTOR$.component.scss']&#10;})&#10;export class $COMPONENT_NAME$ {&#10;  constructor() { }  &#10;  $END$&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+  <template name="ng-component" value="import { Component } from '@angular/core';&#10;&#10;@Component({&#10;  selector: 'padoa-$SELECTOR$',&#10;  templateUrl: './$SELECTOR$.component.html',&#10;  styleUrls: ['./$SELECTOR$.component.scss'],&#10;})&#10;export class $COMPONENT_NAME$ {&#10;  constructor() { }&#10;  $END$&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
     <variable name="COMPONENT_NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
-    <variable name="SELECTOR" expression="lowercaseAndDash(substringBefore(COMPONENT_NAME, Component))" defaultValue="COMPONENT_NAME" alwaysStopAt="false" />
+    <variable name="SELECTOR" expression="lowercaseAndDash(regularExpression(COMPONENT_NAME, &quot;Component&quot;, &quot;&quot;))" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="ng-scam" value="import { Component, NgModule } from '@angular/core';&#10;&#10;@Component({&#10;  selector: 'padoa-$SELECTOR$',&#10;  templateUrl: './$SELECTOR$.component.html',&#10;  styleUrls: ['./$SELECTOR$.component.scss'],&#10;})&#10;export class $COMPONENT_NAME$ {&#10;  constructor() { }&#10;  $END$&#10;}&#10;&#10;@NgModule({&#10;  imports: [],&#10;  declarations: [$COMPONENT_NAME$],&#10;  exports: [$COMPONENT_NAME$],&#10;})&#10;export class $COMPONENT_MODULE$ {&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="COMPONENT_NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <variable name="SELECTOR" expression="lowercaseAndDash(regularExpression(COMPONENT_NAME, &quot;Component&quot;,  &quot;&quot;))" defaultValue="" alwaysStopAt="false" />
+    <variable name="COMPONENT_MODULE" expression="regularExpression(COMPONENT_NAME, &quot;Component&quot;,  &quot;CModule&quot;)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="ng-modal" value="import { Component } from '@angular/core';&#10;import { AbstractModalDirective } from 'app/components/abstract-feature/abstract-modal.directive';&#10;import { BsModalRef } from 'ngx-bootstrap/modal';&#10;import { RoutingService } from 'app/shared/services/technical/routing.service';&#10;&#10;@Component({&#10;  selector: 'padoa-$SELECTOR$-modal',&#10;  templateUrl: './$SELECTOR$.modal.html',&#10;  styleUrls: ['./$SELECTOR$.modal.scss'],&#10;})&#10;export class $MODAL_NAME$Container extends AbstractModalDirective&lt;$END$&gt; {&#10;  public static DEFAULT_CLASSES: string = '';&#10;&#10;  constructor(public bsModalRef: BsModalRef,&#10;              public routingService: RoutingService) {&#10;    super(bsModalRef, routingService);&#10;  }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="MODAL_NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <variable name="SELECTOR" expression="lowercaseAndDash(regularExpression(MODAL_NAME, &quot;Modal&quot;, &quot;&quot;))" defaultValue="" alwaysStopAt="false" />
+    <context>
       <option name="TypeScript" value="true" />
     </context>
   </template>
