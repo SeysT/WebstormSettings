@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="18">
     <extensionMap>
+      <mapping pattern="dmst-health-cause-suggestion" type="AUTO_DETECTED" />
       <mapping pattern="clinical-exam-category-list" type="AUTO_DETECTED" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping ext="module" type="PLAIN_TEXT" />
