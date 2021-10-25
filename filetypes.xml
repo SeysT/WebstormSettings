@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern="dmst-health-cause-suggestion" type="AUTO_DETECTED" />
       <mapping pattern="clinical-exam-category-list" type="AUTO_DETECTED" />
+      <mapping pattern="models" type="AUTO_DETECTED" />
       <mapping pattern="exam_pdf_file" type="AUTO_DETECTED" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping ext="module" type="PLAIN_TEXT" />
